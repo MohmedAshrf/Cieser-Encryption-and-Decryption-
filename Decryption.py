@@ -8,7 +8,7 @@ def n_alpha(char):
 
 key=3 # in cieser
 alpha = list(string.ascii_lowercase) #[a,b,c,d,....z]
-cipher_text= list(map(n_alpha,input("Please enter the plain text(or c to cancel): \n").lower().replace(" ", ""))) #convert apha into numeric
+cipher_text= list(map(n_alpha,input("Please enter the Cipher text (or c to cancel): \n").lower().replace(" ", ""))) #convert apha into numeric
 plain_text = []
 for i in cipher_text:
     if (i>=0) and (i<=25-key): #alpha 
@@ -17,5 +17,5 @@ for i in cipher_text:
         plain_text.append(alpha[(i%26-key)%26])
     else:
         print("invalid input please enter a text from a to z")
-print("\nthe cipher is :\n",*plain_text,sep='')
+print("\nthe plain text is :\n",*plain_text,sep='')
 
